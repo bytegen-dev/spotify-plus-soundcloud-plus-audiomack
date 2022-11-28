@@ -13,6 +13,14 @@ body{
     background: #FFF;
     display: flex;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
 }
 
 a{
@@ -64,13 +72,22 @@ a:hover{
 /* desktop links holder starts */
 
 .desktop-links-holder{
-    position: relative;
+    position: absolute;
     background: var(--black-color);
     width: 450px;
     /* border: 2px solid red; */
     height: 100vh;
     overflow: hidden;
+    /* box-shadow: 10px -20px 80px rgba(0, 0, 0, 0.423); */
     padding: 20px 25px;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: all 1.55s ease;
+}
+
+.showdesk{
+    transform: translateX(0px);
+    transition: all 1.45s ease;
 }
 
 .head{
@@ -93,11 +110,11 @@ a:hover{
 
 @keyframes redblue {
     0%{
-        text-shadow: -3px -3px 5px rgba(255, 0, 0, 0.35), 3px 3px 5px rgba(0, 0, 255, 0.55);
+        text-shadow: -2px -2px 3px rgba(255, 0, 0, 0.55), 2px 2px 3px rgba(0, 0, 255, 0.75);
     }
     
     100%{
-        text-shadow: -3px -3px 5px rgba(0, 0, 255, 0.55), 3px 3px 5px rgba(255, 0, 0, 0.35);
+        text-shadow: -2px -2px 3px rgba(0, 0, 255, 0.75), 2px 2px 3px rgba(255, 0, 0, 0.55);
     }
 }
 
@@ -211,6 +228,7 @@ a:hover{
 
 
 
+
 /* desktop links holder ends */
 
 
@@ -219,17 +237,643 @@ a:hover{
 
 .container{
     width: 100%;
-    height: 100vh;
-    border: 2px solid green;
+    max-height: 100vh;
     overflow-x: hidden;
+    overflow-y: hidden;
+    /* background-image:linear-gradient(rgba(255, 80, 80, 0.3), rgba(0, 0, 58, 0.477)) ,url(./images/wall1.jpg); */
+    /* background: #fff; */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-attachment: fixed; */
+    /* background-repeat: repeat; */
+    transition: all 1.5s ease;
+    position: relative;
+    /* padding-bottom: 100px; */
+}
+
+.container::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+.move{
+    transform: translateX(450px);
+    /* margin-left: 450px; */
+}
+
+.playlists{
+    /* border: 2px solid green; */
+    /* margin: 20px; */
     overflow-y: scroll;
+    height: 100%;
+    /* max-height: 80vh; */
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.desktop-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    /* min-height: 50px; */
+    /* border: 2px solid red; */
+    padding:0 30px 0 70px;
+    background-color: #000;
+    box-shadow: 0px -6px 10px rgba(0, 0, 0, 0.384);
+    /* max-height: 500px; */
+    z-index: 1;
+    transition: all 1.5s ease;
+    position: absolute;
+    bottom: 0;
+}
+
+.dxft{
+    width: calc(100% - 450px);
+    transform: translateY(100px);
+    box-shadow: 0px 0px 0px;
+}
+
+.desktop-footer a{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.desktop-footer .about a span{
+    font-family: fontv;
+    opacity: 0.8;
+    /* text-shadow: 0px 0px 5px 3px rgba(0, 140, 255, 1); */
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bolder;
+}
+
+.desktop-footer .signend a{
+    font-family: fontv;
+    word-spacing: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    height: 50px;
+    font-size: 15px;
+    font-weight: bolder;
+    /* width: 300px; */
+    border-radius: 30px;
+    margin: 10px 0;
+    background-color: #000;
+    color: #fff;
+    padding: 0 50px;
+    transition: all 1s ease;
+    position: relative;
+    
+}
+
+.desktop-footer .signend a:hover{ 
+    padding: 0 50px 0 100px;
+    /* width: 400px; */
+    justify-content: flex-end;
+}
+
+.signend a span{
+    position: absolute;
+    left: 20px;
+    bottom: 13px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.signend a:hover span{
+    opacity: 1;
+    scale: 1.5;
+}
+
+
+
+.desktop-footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.senddown{
+    position: absolute;
+    top: -20px;
+    background-color: #fff;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 5px 5px; */
+    transition: all 0.5s ease;
+    cursor: pointer;
+    transform: translateY(40px);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.senddown:hover{
+    opacity: 1;
+}
+
+.dxftt{
+    box-shadow: 0px 0px 0px;
+    transform: translateY(100%);
+}
+
+.senddown i{
+    position: relative;
+    transition: all 1s ease;
+}
+
+.snnd{
+    transform: translateY(100px) !important;
+}
+
+.snd i{
+    /* top: -25px; */
+    top: -4px;
+    transform: rotate(180deg);
+}
+
+.snd{
+    border-radius: 0px;
+    left: 0;
+    padding: 5px 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    background: #000;
+    transform: translateY(0px);
+    opacity: 0.2;
+}
+
+
+
+.playlists::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+.nav{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+    width: 100%;
+    /* margin-bottom: 40px; */
+    padding: 10px 30px;
+    /* height: 80px; */
+    /* border: 2px solid red; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.111);
+    transition: all 1.5s ease;
+}
+
+.navel{
+    width: calc(100% - 450px);
+}
+
+.hamburger-holder{
+    position: relative;
+}
+
+.showburger .hamburger{
+    transition: all 1s ease;
+    transform: rotate(360deg);
+}
+
+.showburger .hamburger .menu{
+    transition: all 0.25s ease;
+    background-color: transparent;
+}
+
+.showburger .hamburger .menu::before{
+    /* background-color: transparent; */
+    transform: rotate(-45deg);
+    width: 80%;
+    bottom: 7px;
+}
+
+.showburger .hamburger .menu::after{
+    /* background-color: transparent; */
+    width: 80%;
+    bottom: -7px;
+    transform: rotate(45deg);
+}
+
+.hamburger{
+    /* position: absolute; */
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    /* top: 20px; */
+    border-radius: 50%;
+    /* left: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transform: rotate(0deg);
+    transition: all 1s ease;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+/* 
+.hamburger:hover{
+    opacity: 0.2;
+} */
+
+
+.menu{
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: all 2s ease;
+}
+
+.menu::before{
+    border-radius: 20px;
+    width: inherit;
+    height: inherit;
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    bottom: 11px;
+    transition: all 1s ease;
+}
+
+.menu::after{
+    border-radius: 20px;
+    width: inherit;
+    height: inherit;
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    bottom: -11px;
+    transition: all 1s ease;
+}
+
+.signup{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signup a{
+    color: #fff;
+    margin-right: 30px;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.signup a:hover{
+    opacity: 0.9;
+    color: var(--main-color);
+}
+
+.signup .aii{
+    color: #fff;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: fontv;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    /* margin:10px 40px 10px 20px; */
+    opacity: 0.9;
+    margin-right: 0px;
+}
+
+.signup .aii:hover{
+    scale: 1.12;
+    color: #fff;
+}
+
+.trend-desktop{
+    /* border: 2px solid green; */
+    /* margin-top: 40px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    width: 100%;
+    /* padding: 10px 0 0 0; */
+    background-color: transparent;
+    margin-bottom: 40px;
+}
+
+
+.trend-desktop::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+.trend{
+    position: relative;
+    /* border: 2px solid red; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+    min-width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    margin-left: 50px;
+    /* margin-bottom: 0; */
+    /* background-image: linear-gradient(45deg, rgba(255, 217, 0, 0.65), rgba(255, 0, 0, 0.65)); */
+    background-image: url(./images/travis-scott.jpg);
+    background-position: 0px -120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    transition: all 0.7s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.trendi{
+    margin-left: 70px;
+    transition: all 0.7s ease;
+    background-position: center;
+    background-image: url(./images/dave.png);
+}
+
+.trendii{
+    background-position: center;
+    background-image: url(./images/lecraeii.jpg);
+}
+
+.trendiii{
+    background-image:linear-gradient(rgba(255, 0, 0, 0.314), rgba(12, 12, 12, 0.246)), url(./images/1k.png);
+    background-position: center;
+}
+
+.trendiv{
+    background-position: center;
+    background-image:linear-gradient(rgba(255, 208, 0, 0.314), rgba(0, 0, 0, 0.4)),  url(./images/limoblaze.jpg);
+}
+
+.trendv{
+    background-position: center;
+    background-image:linear-gradient(rgba(255, 0, 0, 0.05), rgb(0, 0, 0)), url(./images/wande.jpg);
+}
+
+.trendvi{
+    background-position: center;
+    background-image:linear-gradient(rgba(255, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(./images/cudi.png);
+}
+
+.trend:hover{
+    /* background-scale: 1; */
+    transition: all 1s ease;
+    scale: 1.1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.trendvii{
+    margin-right: 50px;
+    background-size: cover;
+    background-position: center;
+    background-image:linear-gradient(rgba(0, 255, 98, 0.14), rgba(0, 0, 0, 0.8)), url(./images/khalid.jpg);
+
+}
+
+
+/* .trendi, .trendii, .trendiii, .trendiv{
+    margin-right: 40px;
+} */
+
+.trend .song-name{
+    font-family: fonti;
+    /* font-weight: bolder; */
+    color: transparent;
+    font-size: 80px;
+    position: absolute;
+    transition: all 0.7s ease;
+    bottom: 20px;
+    left: 30px;
+    opacity: 0.7;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.trend .song-name:hover{
+    opacity: 1;
+}
+
+.trend .artist-name:hover{
+    opacity: 1;
+    filter: blur(2px);
+}
+
+.trend .artist-name{
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    transition: all 0.7s ease;
+    top: 10px;
+    right: 20px;
+    font-size: 10px;
+    font-family: fontiii;
+    opacity: 0.5;
+    text-transform: capitalize;
+}
+
+.trendvii .artist-name{
+    font-size: 12px;
+}
+
+.trexmusic, .th{
+    margin-left: 70px;
+    opacity: 0.65;
+    font-size: 30px;
+    color: #000; 
+    text-transform: capitalize;
+    font-family: fonti;
+}
+
+.trexmusic{
+    font-size: 35px;
+}
+
+
+.trap-house{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    width: 100%;
+    /* padding: 10px 0 0 0; */
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.trap-house::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+.trap{
+    position: relative;
+    /* border: 2px solid red; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+    min-width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    margin-left: 50px;
+    /* margin-bottom: 0; */
+    background-image: linear-gradient(45deg, rgba(255, 217, 0, 0.65), rgba(255, 0, 0, 0.65));
+    transition: all 0.7s ease;
+    cursor: pointer;
+}
+
+.trapi{
+    background-image:linear-gradient(rgba(255, 0, 0, 0.154), rgba(0, 0, 0, 0.512)) ,url(./images/young4rvr.png);
+    background-size: cover;
+}
+
+.trapii{
+    background-image:linear-gradient(rgba(255, 0, 0, 0.154), rgba(0, 0, 0, 0.512)) ,url(./images/heatma.jpg);
+    background-size: cover;
+}
+
+.trapiii{
+    background-image:linear-gradient(rgba(255, 0, 0, 0.198), rgba(22, 0, 145, 0.512)) ,url(./images/gaming.jfif);
+    background-size: cover;
+}
+
+.trapiv{
+    background-image:linear-gradient(rgba(255, 0, 0, 0.198), rgba(0, 94, 51, 0.174)) ,url(./images/remy.jpg);
+    background-size: cover;
+}
+
+.trapv{
+    background-image:linear-gradient(rgba(93, 0, 255, 0.109), rgba(32, 0, 0, 0.549)) ,url(./images/slime.jpg);
+    background-size: cover;
+}
+
+.trapvi{
+    background-image:linear-gradient(rgba(93, 0, 255, 0.109), rgba(32, 0, 0, 0.549)) ,url(./images/nf.jpg);
+    background-size: cover;
+}
+
+.trap:hover{
+    scale: 1.1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+.trapi{
+    margin-left: 70px;
+    cursor: pointer;
+}
+
+.trapvi{
+    margin-right: 50px;
+}
+
+.trap .playlist-name{
+    color: #fff;
+    font-family: fontv;
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+    font-size: 30px;
+    opacity: 0.8;
+    /* margin-left: 20px; */
+    /* margin-top: 20px; */
+}
+
+.trap .playlist-artists{
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bolder;
+    text-transform: lowercase;
+    opacity: 0.4;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: fonti;
+    /* flex-wrap: nowrap; */
+}
+
+.trap .playlist-genre{
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-family: fontvii;
+    font-weight: bolder;
+    font-size: 40px;
+    opacity: 0.6;
+}
+
+
+
+.trapiv .playlist-genre{
+    font-size: 30px;
+}
+
+
+.trap small{
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    opacity: 0.8;
 }
 
 
 
 
 
+
+
+
+
+
+
+
+
+
 /* desktop css ends*/
+
+
+/* container starts here */
+
+
+
+
+
+
+
+
+
+
+
+
+/* container ends here */
 
 
 
