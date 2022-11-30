@@ -3,10 +3,33 @@
     .signup .aii{
         width: 150px;
     }
+
+    .aii{
+        /* transition: all 5s ease !important; */
+        /* transition-delay:all 2s; */
+        transform: translateX(0);
+        transition: all 1.5s ease !important;
+    }
     
     .navel .signup .aii{
         opacity: 0;
+        transform: translateX(500px);
+        /* transition: all 0.3s ease; */
+        /* transition-delay:all 0s; */
     }
+
+    .navel{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid transparent !important;
+    }
+
+
+    .ai{
+        display: none;
+    }
+
 
     .desktop-links-holder{
         width: 60vw !important;
@@ -36,9 +59,9 @@
         transform: translateX(60vw) !important;
     }
 
-    .move .playlists{
+    /* .move .playlists{
         filter: blur(5px);
-    }
+    } */
 
     /* .desktop-footer .senddown{
         display: none;
