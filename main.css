@@ -270,7 +270,7 @@ a:hover{
     transition-duration: 1.5s, 1s;
     transition-timing-function: ease, ease;
     min-height: -webkit-fill-available;
-
+    
 }
 
 .container::-webkit-scrollbar{
@@ -288,6 +288,7 @@ a:hover{
     /* margin: 20px; */
     overflow-y: scroll;
     height: 100%;
+    min-height: -webkit-fill-available;
     /* max-height: 80vh; */
     padding-top: 120px;
     padding-bottom: 120px;
