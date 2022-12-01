@@ -38,7 +38,7 @@
     
     .navel{
         backdrop-filter: blur(2px) !important; 
-        position: relative;
+        /* position: relative; */
         display: flex;
         justify-content: space-between;
         border-bottom: 2px solid transparent !important;
@@ -48,6 +48,7 @@
     .ai{
         display: none;
     }
+
 
 
     .desktop-links-holder{
@@ -91,6 +92,8 @@
     } */
 
     .desktop-footer{
+        position: absolute;
+        bottom: 0;
         padding: 15px 0 !important;
         display: flex;
         justify-content: center !important;
