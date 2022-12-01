@@ -256,7 +256,10 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 1.5s ease;
+    /* transition: all 1.5s ease; */
+    transition-property: transform, background-color;
+    transition-duration: 1.5s, 1s;
+    transition-timing-function: ease, ease;
 }
 
 .container::-webkit-scrollbar{
@@ -279,6 +282,7 @@ a:hover{
     /* padding-bottom: 120px; */
     overflow-x: hidden;
     transition: all 1s ease;
+    background-color: transparent;
 }
 
 .desktop-footer{
@@ -338,7 +342,7 @@ a:hover{
     /* width: 300px; */
     border-radius: 30px;
     margin: 10px 0;
-    background-color: #fff;
+    background-color: #000;
     color: #fff;
     padding: 0 50px;
     transition: all 1s ease;
@@ -1013,6 +1017,7 @@ a:hover{
 }
 
 .darkdesk .theme{
+    cursor: pointer;
     /* filter: invert(); */
     background: #fff;
     border: 2px solid #fff;
