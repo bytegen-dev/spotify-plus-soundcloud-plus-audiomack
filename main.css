@@ -264,7 +264,7 @@ a:hover{
     background: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* transition: all 1.5s ease; */
     transition-property: transform, background-color;
     transition-duration: 1.5s, 1s;
