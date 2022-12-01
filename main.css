@@ -16,7 +16,7 @@ body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     -webkit-tap-highlight-color: transparent;
     overflow: hidden !important;
-    /* background: red; */
+    background: #111;
 }
 
 .everytin{
@@ -594,7 +594,7 @@ a:hover{
     background-color: transparent;
 }
 
-.darkcon .signup .aii:hover{
+.darkcon .signup .aii{
     border: 2px solid #fff;
     color: #fff;
 }
@@ -795,7 +795,7 @@ a:hover{
     margin-left: 70px;
     opacity: 0.65;
     font-size: 30px;
-    color: #000 !important; 
+    color: #000; 
     text-transform: capitalize;
     font-family: fonti;
 }
@@ -804,8 +804,8 @@ a:hover{
     font-size: 35px;
 }
 
-.darkcon .trexmusic, .th{
-    color: #fff !important;
+.darkcon .trexmusic, .darkcon .th{
+    color: #fff;
 }
 
 
@@ -848,7 +848,7 @@ a:hover{
 }
 
 .darkcon .trap{
-    border: 2px solid rgba(255, 255, 255, 0.306) !important;
+    border: 2px solid rgba(255, 255, 255, 0.45) !important;
     /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8); */
 }
 
