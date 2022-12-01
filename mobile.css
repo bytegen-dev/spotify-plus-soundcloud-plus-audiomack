@@ -81,11 +81,6 @@
     
     
     
-    .move .playlists{
-        /* z-index: -5 !important; */
-        filter: grayscale();
-        /* filter: blur(5px); */
-    }
 
     /* .desktop-footer .senddown{
         display: none;
