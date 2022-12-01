@@ -29,9 +29,8 @@ body{
 .everytin{
     /* border: 2px solid green; */
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     min-height: -webkit-fill-available;
-
     overflow: hidden;
 }
 
