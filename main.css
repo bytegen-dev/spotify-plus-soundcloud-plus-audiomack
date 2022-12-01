@@ -291,7 +291,7 @@ a:hover{
     /* position: relative; */
     /* max-height: 80vh; */
     padding-top: 120px;
-    /* padding-bottom: 120px; */
+    padding-bottom: 120px;
     overflow-x: hidden;
     transition: all 1s ease;
     background-color: transparent;
