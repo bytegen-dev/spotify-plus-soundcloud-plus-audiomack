@@ -23,7 +23,7 @@ body{
     -webkit-tap-highlight-color: transparent;
     overflow: hidden !important;
     background: #111;
-    max-height: -webkit-fill-available;
+    height: -webkit-fill-available;
 }
 
 .everytin{
@@ -501,6 +501,7 @@ a:hover{
     /* margin-bottom: 40px; */
     padding: 10px 30px;
     /* height: 80px; */
+    overflow: hidden;
     /* border: 2px solid red; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.111);
     transition: all 1.5s ease;
