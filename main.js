@@ -24,6 +24,7 @@ function senddown(){
 function theme(){
     ham.classList.toggle('darkham')
     container.classList.toggle('darkcon')
+    deskfoot.classList.toggle('dxftdark')
     desk.classList.toggle('darkdesk')
     navel.classList.toggle('darknav')
 }
