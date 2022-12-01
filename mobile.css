@@ -70,13 +70,12 @@
         border: 2px solid white;
     }
 
-    .dxft{
-        width: 100vw !important;
-        transform: translateX(60vw) !important;
-    }
+    /* .dxft{
+        width: 40vw;
+    } */
 
     .dxft .senddown{
-        transform: translateX(60vw) !important;
+        opacity: 0;
     }
 
 
