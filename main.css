@@ -338,13 +338,14 @@ a:hover{
     /* width: 300px; */
     border-radius: 30px;
     margin: 10px 0;
-    background-color: #000;
+    background-color: #fff;
     color: #fff;
     padding: 0 50px;
     transition: all 1s ease;
     position: relative;
     
 }
+
 
 .desktop-footer .signend a:hover{ 
     padding: 0 50px 0 100px;
@@ -388,10 +389,18 @@ a:hover{
     transform: translateY(40px);
     border-radius: 50%;
     opacity: 0.8;
+    border: 2px solid transparent;
+    color: black;
 }
 
 .senddown:hover{
     opacity: 1;
+}
+
+.darkcon .senddown{
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
 }
 
 .dxftt{
@@ -408,6 +417,7 @@ a:hover{
     transform: translateY(100px) !important;
 }
 
+
 .snd i{
     /* top: -25px; */
     top: -4px;
@@ -423,6 +433,24 @@ a:hover{
     background: #000;
     transform: translateY(0px);
     opacity: 0.2;
+}
+
+.darkcon .snd{
+    border: 2px solid #fff;
+    padding: 0;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.4;
+    border-radius: 50%;
+    transform: translateY(-30px);
+    /* width: 40px;
+    height: 40px; */
+    /* padding: 5px; */
+}
+
+.darkcon .snd i{
+    top: 0;
 }
 
 
