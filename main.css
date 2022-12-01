@@ -526,7 +526,7 @@ a:hover{
     /* justify-content: space-between; */
     align-items: center;
     /* position: relative; */
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(2px);
     z-index: 1;
     width: 100%;
@@ -1111,7 +1111,7 @@ a:hover{
 }
 
 .darknav{
-    background: rgba(0, 0, 0, 0.1) !important;
+    background: rgba(0, 0, 0, 0.7) !important;
     border-left: 5px solid rgb(255, 187, 0);
     border-bottom: 1px solid rgba(255, 255, 255, 0.089);
 }
