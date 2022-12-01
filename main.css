@@ -30,6 +30,8 @@ body{
     /* border: 2px solid green; */
     width: 100vw;
     min-height: 100vh;
+    height: -webkit-fill-available;
+
     overflow: hidden;
 }
 
