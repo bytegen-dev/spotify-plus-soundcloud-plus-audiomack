@@ -101,4 +101,46 @@
         /* opacity: 0; */
         display: none !important;
     }
+
+    .trend{
+        min-width: 300px;
+        height: 200px;
+        margin-left: 30px;
+    }
+
+    .trend:hover{
+        scale: 1;
+    }
+
+    .trend .artist-name{
+        font-size: 7px;
+    }
+
+
+    .trend .song-name{
+        font-size: 30px;
+    }
+
+    .trap{
+        min-width: 240px;
+        height: 200px;
+        margin-left: 20px;
+    }
+
+    .trapi{
+        margin-left: 30px;
+    }
+
+    .trap:hover{
+        scale: 1;
+    }
+
+    .trap .playlist-name{
+        font-size: 25px;
+    }
+
+    .trap .playlist-genre{
+        font-size: 20px;
+        /* letter-spacing: 2px; */
+    }
 }

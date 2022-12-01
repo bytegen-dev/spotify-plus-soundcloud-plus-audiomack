@@ -854,7 +854,7 @@ a:hover{
 .trap:hover{
     scale: 1.1;
     background-size: 200%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     transition-property: scale, background-size;
     transition-duration: 1s, 5s;
     transition-timing-function: ease, ease;
