@@ -20,3 +20,10 @@ function senddown(){
     deskfoot.classList.remove('dxft')
     deskfoot.classList.toggle('dxftt')
 }
+
+function theme(){
+    ham.classList.toggle('darkham')
+    container.classList.toggle('darkcon')
+    desk.classList.toggle('darkdesk')
+    navel.classList.toggle('darknav')
+}
