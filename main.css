@@ -334,6 +334,10 @@ a:hover{
     box-shadow: 0px 0px 0px;
 }
 
+.dxft .senddown{
+    transform: translateX(450px);
+}
+
 .desktop-footer a{
     font-family: sans-serif;
     font-size: 20px;

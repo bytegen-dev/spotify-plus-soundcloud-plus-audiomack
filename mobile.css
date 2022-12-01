@@ -75,6 +75,10 @@
         transform: translateX(60vw) !important;
     }
 
+    .dxft .senddown{
+        transform: translateX(60vw) !important;
+    }
+
 
     .move{
         transform: translateX(60vw) !important;
