@@ -430,9 +430,6 @@ a:hover{
     overflow: hidden;
 }
 
-.senddown:hover{
-    opacity: 1;
-}
 
 .darkcon .senddown{
     border: 2px solid #fff;
