@@ -23,7 +23,7 @@ body{
     -webkit-tap-highlight-color: transparent;
     overflow: hidden !important;
     background: #111;
-    height: -webkit-fill-available;
+    max-height: -webkit-fill-available;
 }
 
 .everytin{
