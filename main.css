@@ -531,11 +531,12 @@ a:hover{
 }
 
 .darkcon .hamburger{
-    background: #fff;
+    background: transparent;
+    border: 2px solid #fff;
 }
 
 .darkcon .menu, .darkcon .menu::after, .darkcon .menu::before{
-    background-color: #000;
+    background-color: #fff;
 }
 /* 
 .hamburger:hover{
@@ -1023,7 +1024,7 @@ a:hover{
 }
 
 .darkcon{
-    background: #222;
+    background: #111;
     /* transition: all 1s ease; */
 }
 
