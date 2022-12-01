@@ -30,7 +30,7 @@ body{
     /* border: 2px solid green; */
     width: 100vw;
     min-height: 100vh;
-    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
 
     overflow: hidden;
 }
@@ -269,7 +269,7 @@ a:hover{
     transition-property: transform, background-color;
     transition-duration: 1.5s, 1s;
     transition-timing-function: ease, ease;
-    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
 
 }
 
