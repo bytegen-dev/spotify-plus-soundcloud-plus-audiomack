@@ -427,6 +427,7 @@ a:hover{
     opacity: 1;
     border: 2px solid transparent;
     color: black;
+    overflow: hidden;
 }
 
 .senddown:hover{
@@ -468,7 +469,7 @@ a:hover{
     /* border-top-right-radius: 10px; */
     color: #fff;
     background: #000;
-    opacity: 0.3;
+    opacity: 0.5;
     /* transform: translateY(0px); */
     /* opacity: 1; */
 }
@@ -478,16 +479,21 @@ a:hover{
     transition: all 1s ease;
 }
 
+.fa-chevron-down{
+    transform: translateY(0px);
+}
 
 .fa-chevron-up{
-    opacity: 0;
+    transform: translateY(30px);
+    /* opacity: 0; */
 }
 
 .snd .fa-chevron-up{
-    opacity: 1;
+    transform: translateY(0);
 }
 
 .snd .fa-chevron-down{
+    transform: translateY(-30px);
     opacity: 0;
 }
 
@@ -498,6 +504,7 @@ a:hover{
 }
 
 .dxftdark .snd{
+    opacity: 0.4;
     background: transparent;
     color: #fff;
 }
