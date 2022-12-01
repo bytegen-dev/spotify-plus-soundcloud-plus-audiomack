@@ -316,7 +316,8 @@ a:hover{
     box-shadow: 0px -6px 10px rgba(0, 0, 0, 0.384);
     /* max-height: 500px; */
     /* z-index: 10; */
-    transition: all 1.5s ease;
+    transition: all 0.7s ease;
+    /* transition-property: op; */
     height: 70px;
     overflow: hidden;
     /* top: 100%; */
@@ -466,7 +467,8 @@ a:hover{
     /* border-top-right-radius: 10px; */
     color: #fff;
     background: #000;
-    opacity: 0.5;
+    opacity: 1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.215);
     /* transform: translateY(0px); */
     /* opacity: 1; */
 }
