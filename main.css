@@ -287,8 +287,8 @@ a:hover{
     /* border: 2px solid green; */
     /* margin: 20px; */
     overflow-y: scroll;
-    height: 100%;
-    min-height: -webkit-fill-available;
+    height: 100vh;
+    /* min-height: -webkit-fill-available; */
     position: relative;
     /* max-height: 80vh; */
     padding-top: 120px;
