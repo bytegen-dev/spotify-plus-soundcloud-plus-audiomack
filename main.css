@@ -794,7 +794,7 @@ a:hover{
     margin-left: 70px;
     opacity: 0.65;
     font-size: 30px;
-    color: #000; 
+    color: #000 !important; 
     text-transform: capitalize;
     font-family: fonti;
 }
