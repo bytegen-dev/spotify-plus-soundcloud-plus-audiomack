@@ -275,7 +275,7 @@ a:hover{
     height: 100%;
     /* max-height: 80vh; */
     padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-bottom: 120px; */
     overflow-x: hidden;
     transition: all 1s ease;
 }
@@ -430,10 +430,10 @@ a:hover{
     position: absolute;
     top: 0;
     left: 0;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     /* position: relative; */
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(2px);
     z-index: 1;
     width: 100%;
@@ -445,8 +445,36 @@ a:hover{
     transition: all 1.5s ease;
 }
 
-.navel{
-    width: calc(100% - 450px);
+
+.menu{
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: all 2s ease;
+}
+
+.menu::before{
+    border-radius: 20px;
+    width: inherit;
+    height: inherit;
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    bottom: 11px;
+    transition: all 1s ease;
+}
+
+.menu::after{
+    border-radius: 20px;
+    width: inherit;
+    height: inherit;
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    bottom: -11px;
+    transition: all 1s ease;
 }
 
 .hamburger-holder{
@@ -500,42 +528,20 @@ a:hover{
 } */
 
 
-.menu{
-    position: relative;
-    width: 100%;
-    height: 4px;
-    background-color: #fff;
-    border-radius: 20px;
-    transition: all 2s ease;
-}
-
-.menu::before{
-    border-radius: 20px;
-    width: inherit;
-    height: inherit;
-    content: "";
-    background-color: #fff;
-    position: absolute;
-    bottom: 11px;
-    transition: all 1s ease;
-}
-
-.menu::after{
-    border-radius: 20px;
-    width: inherit;
-    height: inherit;
-    content: "";
-    background-color: #fff;
-    position: absolute;
-    bottom: -11px;
-    transition: all 1s ease;
-}
 
 .signup{
+    position: absolute;
+    right: 30px;
     /* border: 2px solid black; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease;
+}
+
+.navel .signup{
+    transform: translateX(200px);
 }
 
 .signup a{
@@ -582,10 +588,11 @@ a:hover{
     overflow-x: scroll;
     overflow-y: hidden;
     flex-wrap: nowrap;
-    width: 100%;
+    min-width: 100%;
     /* padding: 10px 0 0 0; */
     background-color: transparent;
     margin-bottom: 40px;
+    /* padding-right: 500px; */
 }
 
 
@@ -595,6 +602,7 @@ a:hover{
 }
 
 .trend{
+    scale: 1;
     position: relative;
     /* border: 2px solid red; */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
@@ -606,19 +614,20 @@ a:hover{
     /* background-image: linear-gradient(45deg, rgba(255, 217, 0, 0.65), rgba(255, 0, 0, 0.65)); */
     background-image: url(./images/travis-scott.jpg);
     background-position: 0px -120px;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
-    transition: all 0.7s ease;
+    transition: all 1s ease;
     cursor: pointer;
     overflow: hidden;
 }
 
 .trendi{
     margin-left: 70px;
-    transition: all 0.7s ease;
+    /* transition: all 0.7s ease; */
     background-position: center;
     background-image: url(./images/dave.png);
+    /* background-size: 100%; */
 }
 
 .trendii{
@@ -629,16 +638,19 @@ a:hover{
 .trendiii{
     background-image:linear-gradient(rgba(255, 0, 0, 0.314), rgba(12, 12, 12, 0.246)), url(./images/1k.png);
     background-position: center;
+    background-size: 150%;
 }
 
 .trendiv{
     background-position: center;
     background-image:linear-gradient(rgba(255, 208, 0, 0.314), rgba(0, 0, 0, 0.4)),  url(./images/limoblaze.jpg);
+    background-size: 150%;
 }
 
 .trendv{
     background-position: center;
     background-image:linear-gradient(rgba(255, 0, 0, 0.05), rgb(0, 0, 0)), url(./images/wande.jpg);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .trendvi{
@@ -646,22 +658,67 @@ a:hover{
     background-image:linear-gradient(rgba(255, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(./images/cudi.png);
 }
 
-.trend:hover{
-    /* background-scale: 1; */
-    transition: all 1s ease;
-    scale: 1.1;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-
-
 .trendvii{
     margin-right: 50px;
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center;
     background-image:linear-gradient(rgba(0, 255, 98, 0.14), rgba(0, 0, 0, 0.8)), url(./images/khalid.jpg);
-
+    background-size: 150%;
 }
+
+.trend:hover{
+    /* background-size: 120%; */
+    scale: 1.1;
+    /* transition: all 1s ease; */
+    background-size: 150%;
+    transition-property: scale, background-size;
+    transition-duration: 1s, 7s;
+    transition-timing-function: ease, ease;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* transition: background-size 20s ease; */
+    animation: none;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-duration: 20s;
+    animation-iteration-count: 1;
+}
+
+/* .trend:hover{
+} */
+
+@keyframes bg-scale {
+    0%{
+        background-size: 100%;
+    }
+    
+    100%{
+        background-size: 150%;
+    }
+}
+
+.trendiii:hover, .trendiv:hover, .trendvii:hover{
+    background-size: 200%;
+
+    animation: none;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-duration: 20s;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes bg-scaleii {
+    0%{
+        background-size: 150%;
+    }
+
+    100%{
+        background-size: 200%;
+    }
+}
+
+
+
 
 
 /* .trendi, .trendii, .trendiii, .trendiv{
@@ -728,10 +785,11 @@ a:hover{
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
+    /* padding-right: 500px; */
     overflow-x: scroll;
     overflow-y: hidden;
     flex-wrap: nowrap;
-    width: 100%;
+    min-width: 100%;
     /* padding: 10px 0 0 0; */
     background-color: transparent;
     margin-bottom: 20px;
@@ -752,43 +810,54 @@ a:hover{
     margin-left: 50px;
     /* margin-bottom: 0; */
     background-image: linear-gradient(45deg, rgba(255, 217, 0, 0.65), rgba(255, 0, 0, 0.65));
-    transition: all 0.7s ease;
+    transition: all 1s ease;
     cursor: pointer;
+    background-size: 120%;
+    background-position: center;
 }
 
 .trapi{
     background-image:linear-gradient(rgba(255, 0, 0, 0.154), rgba(0, 0, 0, 0.512)) ,url(./images/young4rvr.png);
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: 120%;
 }
 
 .trapii{
     background-image:linear-gradient(rgba(255, 0, 0, 0.154), rgba(0, 0, 0, 0.512)) ,url(./images/heatma.jpg);
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: 120%;
 }
 
 .trapiii{
     background-image:linear-gradient(rgba(255, 0, 0, 0.198), rgba(22, 0, 145, 0.512)) ,url(./images/gaming.jfif);
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: 120%;
 }
 
 .trapiv{
     background-image:linear-gradient(rgba(255, 0, 0, 0.198), rgba(0, 94, 51, 0.174)) ,url(./images/remy.jpg);
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: 120%;
 }
 
 .trapv{
     background-image:linear-gradient(rgba(93, 0, 255, 0.109), rgba(32, 0, 0, 0.549)) ,url(./images/slime.jpg);
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: 120%;
 }
 
 .trapvi{
     background-image:linear-gradient(rgba(93, 0, 255, 0.109), rgba(32, 0, 0, 0.549)) ,url(./images/nf.jpg);
-    background-size: cover;
+    background-size: 120%;
 }
 
 .trap:hover{
     scale: 1.1;
+    background-size: 200%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    transition-property: scale, background-size;
+    transition-duration: 1s, 5s;
+    transition-timing-function: ease, ease;
 }
 
 .trapi{

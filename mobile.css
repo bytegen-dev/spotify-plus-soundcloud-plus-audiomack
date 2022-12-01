@@ -1,4 +1,17 @@
 @media screen and (max-width: 750px) {
+    .showburger .hamburger .menu::before{
+        /* background-color: transparent; */
+        transform: rotate(-45deg);
+        width: 80%;
+        bottom: 6px !important;
+    }
+    
+    .showburger .hamburger .menu::after{
+        /* background-color: transparent; */
+        width: 80%;
+        bottom: -6px !important;
+        transform: rotate(45deg);
+    }
 
     .signup .aii{
         width: 150px;
@@ -18,7 +31,13 @@
         /* transition-delay:all 0s; */
     }
 
+    .nav{
+        background-color: transparent;
+        z-index: 2;
+    }
+    
     .navel{
+        backdrop-filter: blur(2px) !important; 
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -58,10 +77,14 @@
     .move{
         transform: translateX(60vw) !important;
     }
-
-    /* .move .playlists{
-        filter: blur(5px);
-    } */
+    
+    
+    
+    .move .playlists{
+        /* z-index: -5 !important; */
+        filter: grayscale();
+        /* filter: blur(5px); */
+    }
 
     /* .desktop-footer .senddown{
         display: none;
