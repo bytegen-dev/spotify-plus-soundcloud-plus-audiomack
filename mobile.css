@@ -72,6 +72,7 @@
 
     .dxft{
         width: 100vw !important;
+        transform: translateX(60vw) !important;
     }
 
 
