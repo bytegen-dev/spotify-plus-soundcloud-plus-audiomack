@@ -485,6 +485,10 @@ a:hover{
 }
 
 
+
+
+
+
 .menu{
     position: relative;
     width: 100%;
@@ -1053,7 +1057,12 @@ a:hover{
 
 .darknav{
     background: rgba(0, 0, 0, 0.1) !important;
+    border-left: 5px solid rgb(255, 187, 0);
     border-bottom: 1px solid rgba(255, 255, 255, 0.089);
+}
+
+.darkcon .navel{
+    border-left: 2px solid transparent;
 }
 
 .darkcon{
@@ -1064,6 +1073,8 @@ a:hover{
 .darkcon .playlists{
     background: transparent;
 }
+
+
 
 
 
