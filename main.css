@@ -6,10 +6,16 @@
     box-sizing: border-box;
 }
 
+html {
+    height: -webkit-fill-available;
+}
+
 body{
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    position: relative;
     width: 100vw;
+    position: relative;
     background-size: cover;
     background: #FFF;
     /* display: flex; */
@@ -17,6 +23,7 @@ body{
     -webkit-tap-highlight-color: transparent;
     overflow: hidden !important;
     background: #111;
+    height: -webkit-fill-available;
 }
 
 .everytin{
