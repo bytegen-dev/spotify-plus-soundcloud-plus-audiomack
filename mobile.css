@@ -149,9 +149,9 @@
     }
 
     .hidden{
-        opacity: 0.4;
+        opacity: 0;
         /* filter: blur(5px); */
-        transition: all 1s ease;
+        transition: all 0.7s ease;
     }
     
     
