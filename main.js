@@ -28,3 +28,8 @@ function theme(){
     desk.classList.toggle('darkdesk')
     navel.classList.toggle('darknav')
 }
+
+function lecrae(){
+    document.querySelector('.lecrae').volume = 0.3
+    document.querySelector('.lecrae').play()
+}
