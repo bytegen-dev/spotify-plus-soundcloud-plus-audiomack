@@ -30,6 +30,14 @@ function theme(){
 }
 
 function lecrae(){
+    // document.querySelector('.trend').toggle('playing')
     document.querySelector('.lecrae').volume = 0.3
     document.querySelector('.lecrae').play()
 }
+
+function lecraeii(){
+    // document.querySelector('.trend').toggle('playing')
+    document.querySelector('.lecraeii').volume = 0.3
+    document.querySelector('.lecraeii').play()
+}
+
